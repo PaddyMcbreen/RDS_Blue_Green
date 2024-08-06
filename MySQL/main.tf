@@ -1,8 +1,10 @@
+# VPC Creation:
 resource "aws_vpc" "mysql_vpc" {
   cidr_block = "10.0.0.0/16"
-  
+
 }
 
+# Subnet Creation:
 resource "aws_subnet" "public_mysql_subnet" {
   vpc_id     = aws_vpc.mysql_vpc.id
   cidr_block = "10.0.1.0/24"
@@ -11,6 +13,7 @@ resource "aws_subnet" "public_mysql_subnet" {
 
 }
 
+# MySQL DB Instance Creation:
 resource "aws_db_instance" "mysql_db_instance" {
   allocated_storage    = 20
   db_name              = "mysqldb"
