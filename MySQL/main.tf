@@ -1,3 +1,7 @@
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
 resource "aws_db_instance" "mysql_db_instance" {
   allocated_storage    = 20
   db_name              = "mysqldb"
