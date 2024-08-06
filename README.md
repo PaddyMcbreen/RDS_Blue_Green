@@ -7,9 +7,9 @@ A blue/green deployment copies a production database environment to a separate, 
 # ------------------------------------------------
 
 # What DB Instances can use Blue/Green Deployments?
-Currently, Blue/Green Deployments are supported for the following:
-RDS for MariaDB
-RDS for MySQL
+Currently, Blue/Green Deployments are supported for the following: <b>
+RDS for MariaDB <b>
+RDS for MySQL<b>
 RDS for PostgreSQL
 # ------------------------------------------------
 
