@@ -7,7 +7,7 @@ variable "name" {
 // Public Subnets: 
 variable "public_subnet_count" {
   type = number
-  default = 3
+  default = 2
 }
 
 // azs config:
@@ -19,7 +19,7 @@ variable "azs_config" {
 // Private Subnets: 
 variable "private_subnet_count" {
   type = number
-  default = 3
+  default = 2
 }
 
 
