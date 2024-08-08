@@ -1,4 +1,4 @@
-# //name change
+ //name change
 variable "name" {
   type = string
   default = "new-vpc"
