@@ -45,6 +45,6 @@ module "mariaDB" {
 }
 
 module "postgreSQL" {
-  source = "./Modules/PostfreSQL"
+  source = "./Modules/PostgreSQL"
 
 }
