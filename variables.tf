@@ -1,4 +1,4 @@
-// MySQL Module Variables:
+// Networking Module Variables:
 
 //vpc name change
 variable "name" {

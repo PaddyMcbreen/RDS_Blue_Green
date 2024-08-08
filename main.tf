@@ -1,7 +1,12 @@
 module "mysql" {
-  source = "./MySQL"
-  
-    // VPC Settings:
+  source = "./Modules/MySQL"
+
+}
+
+module "networking" {
+  source = "./Modules/Networking"
+
+     // VPC Settings:
   name       = var.name
   azs_config = var.azs_config
 
@@ -25,5 +30,4 @@ module "mysql" {
 
   // Priavte Route Table Settings:
   private_rt_names = var.private_rt_names
-  
 }
