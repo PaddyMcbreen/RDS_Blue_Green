@@ -60,3 +60,8 @@ variable "nat_name" {
   type = string 
   description = "The Name of your nat internet gateway"
 }
+
+variable "pub_sub_group_name" {
+  description = "The name of the public subnet group"
+  default = "pub_sub_group"
+}

@@ -37,6 +37,11 @@ resource "aws_subnet" "private_subnets" {
   }
 }
 
+// Public Subnet Group
+resource "aws_db_subnet_group" "pub_sub_group" {
+  name       = var.pub_sub_group_name
+  subnet_ids = aws_subnet.public_subnets[count.index].id
+}
 
 // Internet gateway
 resource "aws_internet_gateway" "igw" {
