@@ -3,7 +3,7 @@
 // ------------------------------------------------------- //
 
 // VPC Settings:
-name       = "new-vpc"
+name       = "my-new-vpc"
 azs_config = "eu-west-2"
 
 // Public Subnet Settings:
@@ -26,3 +26,9 @@ public_rt_name = "public-route-table"
 
 // Priavte Route Table Settings:
 private_rt_names = "private-route-table"
+
+
+// ------------------------------------------------------- //
+// Database Infrastructure Module:
+// ------------------------------------------------------- //
+

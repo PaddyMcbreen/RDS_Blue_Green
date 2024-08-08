@@ -27,24 +27,15 @@ module "networking" {
   private_rt_names = var.private_rt_names
 }
 
-module "mySQL" {
-  source = "./Modules/MySQL"
+module "db_infra" {
+  source = "./Modules/db_infra"
 
-  # Module References:
-  privateSubnets_name = module.networking.privateSubnets_name
-  publicSubnets_name = module.networking.publicSubnets_name
-  private_rt_names = module.netwokring.private_rt_names
-  public_rt_name = module.networking.public_rt_name
-  ig_name = module.networking.ig_name
-  nat_name = module.networking.nat_name
-}
-
-module "mariaDB" {
-  source = "./Modules/MariaDB"
-
-}
-
-module "postgreSQL" {
-  source = "./Modules/PostgreSQL"
-
+  # allocated_storage = var.allocated_storage
+  # db_name = var.db_name
+  # engine = var.engine 
+  # engine_version = var.engine_version
+  # instance_class = var.instance_class
+  # username = var.username
+  # parameter_group_name = var.parameter_group_name
+  # blue_green_update = var.blue_green_update
 }
