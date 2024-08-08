@@ -37,3 +37,7 @@ variable "blue_green_update" {
   description = "Enables the DB instance to use blue/green deployments (true/false)"
   default = true
 }
+
+variable "db_subnet_group_name" {
+  description = "The name of the subnet group"
+}
