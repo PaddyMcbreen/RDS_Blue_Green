@@ -11,7 +11,7 @@ publicSubnets_name  = "public-subnet"
 public_subnet_count = 3
 
 // Private Subnet Settings:
-privateSubnets_name  = "private-subnet"
+privateSubnets_name  = "private-subnet" 
 private_subnet_count = 3
 
 // Internet Gateway Settings:

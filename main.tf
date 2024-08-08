@@ -1,12 +1,7 @@
-module "mysql" {
-  source = "./Modules/MySQL"
-
-}
-
 module "networking" {
   source = "./Modules/Networking"
 
-     // VPC Settings:
+  // VPC Settings:
   name       = var.name
   azs_config = var.azs_config
 
@@ -30,4 +25,26 @@ module "networking" {
 
   // Priavte Route Table Settings:
   private_rt_names = var.private_rt_names
+}
+
+module "mySQL" {
+  source = "./Modules/MySQL"
+
+  # Module References:
+  privateSubnets_name = module.networking.privateSubnets_name
+  publicSubnets_name = module.networking.publicSubnets_name
+  private_rt_names = module.netwokring.private_rt_names
+  public_rt_name = module.networking.public_rt_name
+  ig_name = module.networking.ig_name
+  nat_name = module.networking.nat_name
+}
+
+module "mariaDB" {
+  source = "./Modules/MariaDB"
+
+}
+
+module "postgreSQL" {
+  source = "./Modules/PostfreSQL"
+
 }
