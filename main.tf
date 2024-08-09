@@ -33,13 +33,5 @@ module "networking" {
 module "db_infra" {
   source = "./Modules/db_infra"
 
-  db_subnet_group_name = module.networking.db_subnet_group_name
-  # allocated_storage = var.allocated_storage
-  # db_name = var.db_name
-  # engine = var.engine 
-  # engine_version = var.engine_version
-  # instance_class = var.instance_class
-  # username = var.username
-  # parameter_group_name = var.parameter_group_name
-  # blue_green_update = var.blue_green_update
+  pub_sub_group_ids = module.networking.pub_sub_group_ids
 }

@@ -38,6 +38,7 @@ variable "blue_green_update" {
   default = true
 }
 
-variable "db_subnet_group_name" {
-  description = "The name of the subnet group"
+variable "pub_sub_group_ids" {
+  description = "List of subnet IDs to associate with the DB instance"
+  type        = string
 }
