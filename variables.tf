@@ -56,3 +56,7 @@ variable "nat_name" {
   type        = string
   description = "The Name of your nat internet gateway"
 }
+
+variable "db_subnet_group_name" {
+  description = "The name of the subnet group"
+}

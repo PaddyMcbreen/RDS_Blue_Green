@@ -13,6 +13,9 @@ module "networking" {
   privateSubnets_name  = var.privateSubnets_name
   private_subnet_count = var.private_subnet_count
 
+  // DBSubnet Group Name
+  # db_subnet_group_name = var.db_subnet_group_name
+
   // Internet Gateway Settings:
   enable_internet_gateway = var.enable_internet_gateway
   ig_name                 = var.ig_name
@@ -30,6 +33,7 @@ module "networking" {
 module "db_infra" {
   source = "./Modules/db_infra"
 
+  db_subnet_group_name = module.networking.db_subnet_group_name
   # allocated_storage = var.allocated_storage
   # db_name = var.db_name
   # engine = var.engine 
