@@ -32,3 +32,4 @@ private_rt_names = "private-route-table"
 // Database Infrastructure Module:
 // ------------------------------------------------------- //
 
+db_subnet_group_name = "public_subnet_group"
