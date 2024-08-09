@@ -40,5 +40,5 @@ variable "blue_green_update" {
 
 variable "pub_sub_group_ids" {
   description = "List of subnet IDs to associate with the DB instance"
-  type        = string
+  type        = list(string)
 }
