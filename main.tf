@@ -34,4 +34,6 @@ module "db_infra" {
   source = "./Modules/db_infra"
 
   pub_sub_group_ids = module.networking.pub_sub_group_ids
+  pub_sub_group_name = module.networking.pub_sub_group_name
+
 }

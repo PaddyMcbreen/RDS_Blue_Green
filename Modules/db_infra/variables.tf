@@ -42,3 +42,8 @@ variable "pub_sub_group_ids" {
   description = "List of subnet IDs to associate with the DB instance"
   type        = list(string)
 }
+
+variable "pub_sub_group_name" {
+  description = "The name of the public subnet group"
+  type        = string
+}
