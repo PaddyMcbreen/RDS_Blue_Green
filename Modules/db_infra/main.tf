@@ -8,6 +8,7 @@ resource "aws_db_instance" "mysql_db_instance" {
   username             = var.username
   password             = "password" # var.password
   parameter_group_name = "default.mysql8.0"
+  backup_retention_period = 7
   skip_final_snapshot  = true
 
   blue_green_update {
