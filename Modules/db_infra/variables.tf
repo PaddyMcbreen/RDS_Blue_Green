@@ -15,7 +15,7 @@ variable "engine" {
 
 variable "engine_version" {
   description = "The engine version you want to use for your DB instance (based off what engine your are using)"
-  default = "8.0"
+  default = "8.0.33"
 }
 
 variable "instance_class" {

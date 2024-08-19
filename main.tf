@@ -37,3 +37,7 @@ module "db_infra" {
   pub_sub_group_name = module.networking.pub_sub_group_name
 
 }
+
+module "mysql-testing" {
+  source = "./Modules/testing"
+}
